@@ -17,8 +17,10 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from .core import views as core_view
+from .subscriptions.views import subscribe
 
 urlpatterns = [
     url(r'^$', core_view.home),
+    url(r'^inscricao/$', subscribe),
     url(r'^admin/', include(admin.site.urls)),
 ]
